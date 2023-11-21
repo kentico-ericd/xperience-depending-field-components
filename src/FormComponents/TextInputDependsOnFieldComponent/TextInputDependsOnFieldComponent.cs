@@ -35,9 +35,9 @@ namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFi
 
         protected override void ConfigureComponent()
         {
-            if (!String.IsNullOrEmpty(Properties.FieldName) && Properties.ExpectedValue is not null)
+            if (!String.IsNullOrEmpty(Properties.DependsOn) && Properties.ExpectedValue is not null)
             {
-                AddVisibilityCondition(new DependingFieldVisibilityCondition(Properties.FieldName, Properties.ExpectedValue));
+                AddVisibilityCondition(new DependingFieldVisibilityCondition(Properties.DependsOn, Properties.ExpectedValue));
             }
 
             base.ConfigureComponent();
