@@ -6,18 +6,27 @@ using Xperience.DependingFieldComponents.VisibilityConditions;
 
 namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOnFieldComponent
 {
+    /// <summary>
+    /// A form component which can be configured to appear based on the value of another field.
+    /// </summary>
     [ComponentAttribute(typeof(NumberInputDependsOnFieldAttribute))]
     public class NumberInputDependsOnFieldComponent : FormComponent<NumberInputDependsOnFieldProperties, NumberInputClientProperties, int?>
     {
         private readonly ILocalizationService localizationService;
 
 
+        /// <summary>
+        /// The identifier for the <see cref="NumberInputDependsOnFieldComponent"/>.
+        /// </summary>
         public const string IDENTIFIER = "NumberInputDependsOnFieldComponent";
 
 
         public override string ClientComponentName => "@kentico/xperience-admin-base/NumberInput";
 
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="NumberInputDependsOnFieldComponent"/>.
+        /// </summary>
         public NumberInputDependsOnFieldComponent(ILocalizationService localizationService) : base(localizationService)
         {
             this.localizationService = localizationService;

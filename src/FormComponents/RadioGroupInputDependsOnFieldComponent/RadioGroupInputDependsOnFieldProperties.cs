@@ -1,12 +1,13 @@
 ﻿using Kentico.Xperience.Admin.Base.FormAnnotations;
 using Kentico.Xperience.Admin.Base.Forms;
 
-namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOnFieldComponent
+namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDependsOnFieldComponent
 {
     /// <summary>
-    /// Properties for the <see cref="NumberInputDependsOnFieldComponent"/> component.
+    /// Properties for the <see cref="RadioGroupInputDependsOnFieldComponent"/> component which inherits the default
+    /// Xperience by Kentico radio group properties.
     /// </summary>
-    public class NumberInputDependsOnFieldProperties : FormComponentProperties
+    public class RadioGroupInputDependsOnFieldProperties : RadioGroupProperties, IDependsOnPropertyProperties
     {
         [TextInputComponent(Label = "Depends on", ExplanationText = "The name of the field that determines this field's visibility", Order = 1)]
         public string? DependsOn { get; set; }
@@ -14,9 +15,5 @@ namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOn
 
         [TextInputComponent(Label = "Expected value", ExplanationText = "The value of the depending field which will reveal this field", Order = 2)]
         public string? ExpectedValue { get; set; }
-
-
-        [TextInputComponent(Label = "{$base.forms.numberinput.watermark.label$}", Tooltip = "{$base.forms.numberinput.watermark.tooltip$}")]
-        public string? WatermarkText { get; set; }
     }
 }
