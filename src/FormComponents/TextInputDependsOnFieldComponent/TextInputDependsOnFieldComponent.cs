@@ -12,13 +12,13 @@ namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFi
     [ComponentAttribute(typeof(TextInputDependsOnFieldAttribute))]
     public class TextInputDependsOnFieldComponent : FormComponent<TextInputDependsOnFieldProperties, TextInputClientProperties, string>
     {
+        private readonly ILocalizationService localizationService;
+
+
         /// <summary>
         /// The identifier for the <see cref="TextInputDependsOnFieldComponent"/>.
         /// </summary>
         public const string IDENTIFIER = "TextInputDependsOnFieldComponent";
-
-
-        private readonly ILocalizationService localizationService;
 
 
         public override string ClientComponentName => "@kentico/xperience-admin-base/TextInput";
