@@ -14,7 +14,7 @@ namespace Xperience.DependingFieldComponents.FormComponents
 
 
         /// <summary>
-        /// The value of the property specified by <see cref="PropertyName"/> which will reveal the depending property.
+        /// The value of the property specified by <see cref="DependsOn"/> which will reveal the depending property.
         /// </summary>
         public string? ExpectedValue { get; set; }
     }
