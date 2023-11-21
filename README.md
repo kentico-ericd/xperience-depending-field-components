@@ -1,6 +1,6 @@
 # Xperience by Kentico depending field components
 
-When editing content, often developers will want to hide a field's input based on the value of another field. For example, if a widget _might_ contain a link to an external site, there will be a checkbox called "Has external link." If the checkbox is not checked, the text input for the external link should be hidden.
+When editing content, often developers will want to hide a field's input based on the value of another field. For example, if an article _might_ contain a link to an external site, there will be a checkbox called "Has external link." If the checkbox is not checked, the text input for the external link should be hidden.
 
 This project adds custom form components to Xperience by Kentico which allows developers to configure depending field functionality directly in the UI or code. These form components can be used in content types and widget properties.
 
