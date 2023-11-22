@@ -15,10 +15,10 @@ namespace Xperience.DependingFieldComponents.VisibilityConditions
 
 
         /// <summary>
-        /// Initializes a new instance of <see cref="BooleanFieldVisibilityCondition"/>.
+        /// Initializes a new instance of <see cref="DependingFieldVisibilityCondition"/>.
         /// </summary>
         /// <param name="dependsOn">The name of the field that determines whether the component is visible.</param>
-        /// <param name="expectedValue">The value of the field specified by <paramref name="fieldName"/> which will reveal the depending field.</param>
+        /// <param name="expectedValue">The value of the field specified by <paramref name="dependsOn"/> which will reveal the depending field.</param>
         public DependingFieldVisibilityCondition(string dependsOn, string expectedValue)
         {
             this.dependsOn = dependsOn;
