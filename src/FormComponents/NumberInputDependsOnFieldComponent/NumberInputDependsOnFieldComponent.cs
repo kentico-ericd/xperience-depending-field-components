@@ -2,7 +2,11 @@
 
 using Kentico.Xperience.Admin.Base.Forms;
 
+using Xperience.DependingFieldComponents;
+using Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOnFieldComponent;
 using Xperience.DependingFieldComponents.VisibilityConditions;
+
+[assembly: RegisterFormComponent(DependingFieldComponentsConstants.NUMBERINPUT_IDENTIFIER, typeof(NumberInputDependsOnFieldComponent), DependingFieldComponentsConstants.NUMBERINPUT_FIELDDESCRIPTION)]
 
 namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOnFieldComponent
 {
@@ -13,12 +17,6 @@ namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOn
     public class NumberInputDependsOnFieldComponent : FormComponent<NumberInputDependsOnFieldProperties, NumberInputClientProperties, int?>
     {
         private readonly ILocalizationService localizationService;
-
-
-        /// <summary>
-        /// The identifier for the <see cref="NumberInputDependsOnFieldComponent"/>.
-        /// </summary>
-        public const string IDENTIFIER = "NumberInputDependsOnFieldComponent";
 
 
         public override string ClientComponentName => "@kentico/xperience-admin-base/NumberInput";

@@ -2,7 +2,11 @@
 
 using Kentico.Xperience.Admin.Base.Forms;
 
+using Xperience.DependingFieldComponents;
+using Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFieldComponent;
 using Xperience.DependingFieldComponents.VisibilityConditions;
+
+[assembly: RegisterFormComponent(DependingFieldComponentsConstants.TEXTINPUT_IDENTIFIER, typeof(TextInputDependsOnFieldComponent), DependingFieldComponentsConstants.TEXTINPUT_FIELDDESCRIPTION)]
 
 namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFieldComponent
 {
@@ -13,12 +17,6 @@ namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFi
     public class TextInputDependsOnFieldComponent : FormComponent<TextInputDependsOnFieldProperties, TextInputClientProperties, string>
     {
         private readonly ILocalizationService localizationService;
-
-
-        /// <summary>
-        /// The identifier for the <see cref="TextInputDependsOnFieldComponent"/>.
-        /// </summary>
-        public const string IDENTIFIER = "TextInputDependsOnFieldComponent";
 
 
         public override string ClientComponentName => "@kentico/xperience-admin-base/TextInput";

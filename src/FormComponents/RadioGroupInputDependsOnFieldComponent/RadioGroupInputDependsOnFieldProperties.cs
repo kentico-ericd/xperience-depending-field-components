@@ -9,11 +9,11 @@ namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDepen
     /// </summary>
     public class RadioGroupInputDependsOnFieldProperties : RadioGroupProperties, IDependsOnPropertyProperties
     {
-        [TextInputComponent(Label = "Depends on", ExplanationText = "The name of the field that determines this field's visibility", Order = 1)]
+        [TextInputComponent(Label = DependingFieldComponentsConstants.PROPERTY_DEPENDSON_LABEL, Tooltip = DependingFieldComponentsConstants.PROPERTY_DEPENDSON_TOOLTIP, Order = 1)]
         public string? DependsOn { get; set; }
 
 
-        [TextInputComponent(Label = "Expected value", ExplanationText = "The value of the depending field which will reveal this field", Order = 2)]
+        [TextInputComponent(Label = DependingFieldComponentsConstants.PROPERTY_EXPECTEDVALUE_LABEL, Tooltip = DependingFieldComponentsConstants.PROPERTY_EXPECTEDVALUE_TOOLTIP, Order = 2)]
         public string? ExpectedValue { get; set; }
     }
 }

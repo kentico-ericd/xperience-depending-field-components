@@ -2,7 +2,11 @@
 
 using Kentico.Xperience.Admin.Base.Forms;
 
+using Xperience.DependingFieldComponents;
+using Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDependsOnFieldComponent;
 using Xperience.DependingFieldComponents.VisibilityConditions;
+
+[assembly: RegisterFormComponent(DependingFieldComponentsConstants.RADIOGROUP_IDENTIFIER, typeof(RadioGroupInputDependsOnFieldComponent), DependingFieldComponentsConstants.RADIOGROUP_FIELDDESCRIPTION)]
 
 namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDependsOnFieldComponent
 {
@@ -13,12 +17,6 @@ namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDepen
     public class RadioGroupInputDependsOnFieldComponent : FormComponent<RadioGroupInputDependsOnFieldProperties, RadioGroupClientProperties, string>
     {
         private readonly ILocalizationService localizationService;
-
-
-        /// <summary>
-        /// The identifier for the <see cref="RadioGroupInputDependsOnFieldComponent"/>.
-        /// </summary>
-        public const string IDENTIFIER = "RadioGroupInputDependsOnFieldComponent";
 
 
         public override string ClientComponentName => "@kentico/xperience-admin-base/RadioGroup";
@@ -59,7 +57,7 @@ namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDepen
         {
             var value = base.GetValue();
 
-            return GetOptions()?.FirstOrDefault(o => o.Value == value)?.Value;
+            return GetOptions()?.FirstOrDefault(o => o.Value == value)?.Value ?? String.Empty;
         }
 
 
