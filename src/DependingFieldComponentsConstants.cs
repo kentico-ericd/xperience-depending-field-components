@@ -17,6 +17,9 @@ namespace Xperience.DependingFieldComponents
         public const string DROPDOWNINPUT_IDENTIFIER = "Xperience.DependingFieldComponents.DropdownInput";
         public const string DROPDOWNINPUT_FIELDDESCRIPTION = "Dropdown selector with field dependency";
 
+        public const string CHECKBOXINPUT_IDENTIFIER = "Xperience.DependingFieldComponents.CheckboxInput";
+        public const string CHECKBOXINPUT_FIELDDESCRIPTION = "Checkbox with field dependency";
+
         public const string PROPERTY_DEPENDSON_LABEL = "Depends on";
         public const string PROPERTY_DEPENDSON_TOOLTIP = "The name of the field that determines this field's visibility";
 
