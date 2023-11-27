@@ -27,16 +27,13 @@ namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFi
         /// </summary>
         public TextInputDependsOnFieldComponent(ILocalizationService localizationService) : base(localizationService)
         {
-            this.localizationService = localizationService;
+            this.localizationService = localizationService ?? throw new ArgumentNullException(nameof(localizationService));
         }
 
 
         protected override void ConfigureComponent()
         {
-            if (!String.IsNullOrEmpty(Properties.DependsOn) && Properties.ExpectedValue is not null)
-            {
-                AddVisibilityCondition(new DependingFieldVisibilityCondition(Properties.DependsOn, Properties.ExpectedValue));
-            }
+            DependingFieldVisibilityCondition.Configure(this);
 
             base.ConfigureComponent();
         }

@@ -14,6 +14,9 @@ namespace Xperience.DependingFieldComponents
         public const string RADIOGROUP_IDENTIFIER = "Xperience.DependingFieldComponents.RadioGroupInput";
         public const string RADIOGROUP_FIELDDESCRIPTION = "Radio button group with field dependency";
 
+        public const string DROPDOWNINPUT_IDENTIFIER = "Xperience.DependingFieldComponents.DropdownInput";
+        public const string DROPDOWNINPUT_FIELDDESCRIPTION = "Dropdown selector with field dependency";
+
         public const string PROPERTY_DEPENDSON_LABEL = "Depends on";
         public const string PROPERTY_DEPENDSON_TOOLTIP = "The name of the field that determines this field's visibility";
 

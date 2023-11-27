@@ -27,7 +27,7 @@ namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOn
         /// </summary>
         public NumberInputDependsOnFieldComponent(ILocalizationService localizationService) : base(localizationService)
         {
-            this.localizationService = localizationService;
+            this.localizationService = localizationService ?? throw new ArgumentNullException(nameof(localizationService));
         }
 
 
@@ -44,10 +44,9 @@ namespace Xperience.DependingFieldComponents.FormComponents.NumberInputDependsOn
 
             AddValidationRule(maxRule);
             AddValidationRule(minRule);
-            if (!String.IsNullOrEmpty(Properties.DependsOn) && Properties.ExpectedValue is not null)
-            {
-                AddVisibilityCondition(new DependingFieldVisibilityCondition(Properties.DependsOn, Properties.ExpectedValue));
-            }
+            DependingFieldVisibilityCondition.Configure(this);
+
+            base.ConfigureComponent();
         }
 
 

@@ -5,7 +5,7 @@ namespace Xperience.DependingFieldComponents.FormComponents
     /// <summary>
     /// Contains common form component properties used within the <see cref="DependingFieldVisibilityCondition"/>
     /// </summary>
-    internal interface IDependsOnPropertyProperties
+    public interface IDependsOnPropertyProperties
     {
         /// <summary>
         /// The name of the property that determines whether the component is visible.

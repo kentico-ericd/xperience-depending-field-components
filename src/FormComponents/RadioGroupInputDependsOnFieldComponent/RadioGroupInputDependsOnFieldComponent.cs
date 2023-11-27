@@ -27,16 +27,13 @@ namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDepen
         /// </summary>
         public RadioGroupInputDependsOnFieldComponent(ILocalizationService localizationService)
         {
-            this.localizationService = localizationService;
+            this.localizationService = localizationService ?? throw new ArgumentNullException(nameof(localizationService));
         }
 
 
         protected override void ConfigureComponent()
         {
-            if (!String.IsNullOrEmpty(Properties.DependsOn) && Properties.ExpectedValue is not null)
-            {
-                AddVisibilityCondition(new DependingFieldVisibilityCondition(Properties.DependsOn, Properties.ExpectedValue));
-            }
+            DependingFieldVisibilityCondition.Configure(this);
 
             base.ConfigureComponent();
         }

@@ -1,5 +1,7 @@
 ﻿using Kentico.Xperience.Admin.Base.Forms;
 
+using Xperience.DependingFieldComponents.FormComponents;
+
 namespace Xperience.DependingFieldComponents.VisibilityConditions
 {
     /// <summary>
@@ -43,6 +45,21 @@ namespace Xperience.DependingFieldComponents.VisibilityConditions
             }
 
             return true;
+        }
+
+
+        /// <summary>
+        /// Applies a visibility condition if the required conditions are met.
+        /// </summary>
+        /// <param name="component">The form component to apply the visibility condition to.</param>
+        public static void Configure<TProps, TClientProps, TValue>(FormComponent<TProps, TClientProps, TValue> component)
+            where TProps : FormComponentProperties, IDependsOnPropertyProperties, new()
+            where TClientProps : FormComponentClientProperties<TValue>, new()
+        {
+            if (!String.IsNullOrEmpty(component.Properties.DependsOn) && component.Properties.ExpectedValue is not null)
+            {
+                component.AddVisibilityCondition(new DependingFieldVisibilityCondition(component.Properties.DependsOn, component.Properties.ExpectedValue));
+            }
         }
     }
 }
