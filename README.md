@@ -9,7 +9,10 @@ This project adds custom form components to Xperience by Kentico which allows de
 
 ## Compatibility
 
-Xperience by Kentico version __27.y.z__ has been tested and is supported. __28.y.z__ has not been tested but is supported by the package and should work.
+The following Xperience by Kentico versions have been tested and are supported by this project:
+
+- 27.y.z
+- 28.y.z
 
 ## Components
 
