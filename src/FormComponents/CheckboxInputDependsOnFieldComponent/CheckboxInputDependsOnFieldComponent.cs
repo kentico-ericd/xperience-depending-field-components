@@ -11,7 +11,7 @@ namespace Xperience.DependingFieldComponents.FormComponents.CheckboxInputDepends
     /// A form component which can be configured to appear based on the value of another field.
     /// </summary>
     [ComponentAttribute(typeof(CheckboxInputDependsOnFieldAttribute))]
-    public class CheckboxInputDependsOnFieldComponent : FormComponent<CheckboxInputDependsOnFieldProperties, CheckBoxClientProperties, bool>
+    public class CheckboxInputDependsOnFieldComponent : FormComponent<DependsOnPropertyProperties, CheckBoxClientProperties, bool>
     {
         public override string ClientComponentName => "@kentico/xperience-admin-base/Checkbox";
 

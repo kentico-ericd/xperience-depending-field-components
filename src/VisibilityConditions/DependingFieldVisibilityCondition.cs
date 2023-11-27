@@ -53,7 +53,7 @@ namespace Xperience.DependingFieldComponents.VisibilityConditions
         /// </summary>
         /// <param name="component">The form component to apply the visibility condition to.</param>
         public static void Configure<TProps, TClientProps, TValue>(FormComponent<TProps, TClientProps, TValue> component)
-            where TProps : FormComponentProperties, IDependsOnPropertyProperties, new()
+            where TProps : DependsOnPropertyProperties, new()
             where TClientProps : FormComponentClientProperties<TValue>, new()
         {
             if (!String.IsNullOrEmpty(component.Properties.DependsOn) && component.Properties.ExpectedValue is not null)

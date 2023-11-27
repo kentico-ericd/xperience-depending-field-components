@@ -1,22 +1,20 @@
 ﻿using Kentico.Xperience.Admin.Base.FormAnnotations;
-using Kentico.Xperience.Admin.Base.Forms;
 
 namespace Xperience.DependingFieldComponents.FormComponents.DropdownInputDependsOnFieldComponent
 {
     /// <summary>
-    /// Properties for the <see cref="DropdownInputDependsOnFieldComponent"/> component which inherits the default
-    /// Xperience by Kentico dropdown input properties.
+    /// Properties for the <see cref="DropdownInputDependsOnFieldComponent"/> component.
     /// </summary>
-    public class DropdownInputDependsOnFieldProperties : DropDownProperties, IDependsOnPropertyProperties
+    public class DropdownInputDependsOnFieldProperties : DependsOnPropertyProperties
     {
-        [TextInputComponent(Label = DependingFieldComponentsConstants.PROPERTY_DEPENDSON_LABEL, Tooltip = DependingFieldComponentsConstants.PROPERTY_DEPENDSON_TOOLTIP, Order = 1)]
-        public string? DependsOn { get; set; }
+        public IEnumerable<DropDownOptionItem>? OptionsItems { get; set; }
 
 
-        [TextInputComponent(Label = DependingFieldComponentsConstants.PROPERTY_EXPECTEDVALUE_LABEL, Tooltip = DependingFieldComponentsConstants.PROPERTY_EXPECTEDVALUE_TOOLTIP, Order = 2)]
-        public string? ExpectedValue { get; set; }
+        [TextAreaComponent(Label = "{$base.forms.dropdown.options.label$}", ExplanationText = "{$base.forms.dropdown.options.explanation$}")]
+        public string? Options { get; set; }
 
 
-        internal IEnumerable<DropDownOptionItem>? OptionsItems { get; set; }
+        [TextInputComponent(Label = "{$base.forms.dropdown.placeholder.label$}", Tooltip = "{$base.forms.dropdown.placeholder.tooltip$}")]
+        public string? Placeholder { get; set; }
     }
 }

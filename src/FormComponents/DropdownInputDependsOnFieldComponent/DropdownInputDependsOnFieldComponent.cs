@@ -66,7 +66,7 @@ namespace Xperience.DependingFieldComponents.FormComponents.DropdownInputDepends
             }
 
             return KeyValueOptionsParser.ParseDataSource(
-                Properties.Options,
+                Properties.Options ?? String.Empty,
                 (value, text) => new DropDownOptionItem { Value = value, Text = localizationService.LocalizeString(text) }
             );
         }
