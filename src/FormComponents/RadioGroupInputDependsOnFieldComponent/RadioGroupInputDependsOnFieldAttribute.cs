@@ -2,7 +2,7 @@
 
 namespace Xperience.DependingFieldComponents.FormComponents.RadioGroupInputDependsOnFieldComponent
 {
-    public class RadioGroupInputDependsOnFieldAttribute : FormComponentAttribute, IDependsOnPropertyProperties
+    public class RadioGroupInputDependsOnFieldAttribute : RadioGroupComponentAttribute, IDependsOnPropertyProperties
     {
         public string? DependsOn { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace Xperience.DependingFieldComponents.FormComponents.DropdownInputDependsOnFieldComponent
 {
-    public class DropdownInputDependsOnFieldAttribute : FormComponentAttribute, IDependsOnPropertyProperties
+    public class DropdownInputDependsOnFieldAttribute : DropDownComponentAttribute, IDependsOnPropertyProperties
     {
         public string? DependsOn { get; set; }
 
