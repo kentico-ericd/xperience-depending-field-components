@@ -4,6 +4,10 @@ When editing content, often developers will want to hide a field's input based o
 
 This project adds custom form components to Xperience by Kentico which allows developers to configure depending field functionality directly in the UI or code. These form components can be used in content types and widget properties.
 
+## Compatibility
+
+Xperience by Kentico version __27.y.z__ has been tested and is supported. __28.y.z__ has not been tested but is supported by the package and should work.
+
 ## Components
 
 The project currently contains the following input types with depending field functionality:
