@@ -27,5 +27,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: NuGet
-        path: /**/*.nupkg
+        path: ./**/*.nupkg
           
