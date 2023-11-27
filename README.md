@@ -11,6 +11,7 @@ The project currently contains the following input types with depending field fu
 - Text
 - Number
 - Radio group
+- Dropdown
 
 ## Configuring depending fields in the administration
 
