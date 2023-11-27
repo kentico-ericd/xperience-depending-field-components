@@ -1,5 +1,5 @@
-[![Nuget](https://img.shields.io/nuget/v/Xperience.DependingFieldComponents)](https://www.nuget.org/packages/Xperience.DependingFieldComponents/1.0.0#versions-body-tab)
-![build](https://github.com/kentico-ericd/xperience-depending-field-components/actions/workflows/build.yml/badge.svg)
+[![Nuget](https://img.shields.io/nuget/v/Xperience.DependingFieldComponents)](https://www.nuget.org/packages/Xperience.DependingFieldComponents#versions-body-tab)
+[![build](https://github.com/kentico-ericd/xperience-depending-field-components/actions/workflows/build.yml/badge.svg)](https://github.com/kentico-ericd/xperience-depending-field-components/actions/workflows/build.yml)
 
 # Xperience by Kentico depending field components
 
