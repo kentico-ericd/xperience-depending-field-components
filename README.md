@@ -1,3 +1,6 @@
+[![NuGet](https://img.shields.io/nuget/v/Xperience.DependingFieldComponents)]([https://www.nuget.org/packages/Xperience.DependingFieldComponents](https://www.nuget.org/packages/Xperience.DependingFieldComponents/1.0.0#versions-body-tab))
+![build](https://github.com/kentico-ericd/xperience-depending-field-components/actions/workflows/build.yml/badge.svg)
+
 # Xperience by Kentico depending field components
 
 When editing content, often developers will want to hide a field's input based on the value of another field. For example, if an article _might_ contain a link to an external site, there will be a checkbox called "Has external link." If the checkbox is not checked, the text input for the external link should be hidden.
