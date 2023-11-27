@@ -6,7 +6,7 @@
 	<Company>Kentico</Company>
 	<Product>Xperience by Kentico</Product>
 	<Description>A collection of Xperience by Kentico form components whose visibility depend on the value of another field</Description>
-	<PackageIconUrl>https://raw.githubusercontent.com/Kentico/Home/main/images/logo_nuget.png</PackageIconUrl>
+	<PackageIcon>icon.png</PackageIcon>
 	<TargetFramework>net6.0</TargetFramework>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
@@ -16,6 +16,10 @@
   <ItemGroup>
     <PackageReference Include="Kentico.Xperience.Admin" Version="[27, 28]" />
     <PackageReference Include="Kentico.Xperience.WebApp" Version="[27, 28]" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\img\icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
