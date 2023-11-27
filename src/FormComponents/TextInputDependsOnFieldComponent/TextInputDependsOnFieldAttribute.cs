@@ -2,7 +2,7 @@
 
 namespace Xperience.DependingFieldComponents.FormComponents.TextInputDependsOnFieldComponent
 {
-    public class TextInputDependsOnFieldAttribute : TextInputComponentAttribute, IDependsOnPropertyProperties
+    public class TextInputDependsOnFieldAttribute : FormComponentAttribute, IDependsOnPropertyProperties
     {
         public string? DependsOn { get; set; }
 
