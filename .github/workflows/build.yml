@@ -23,3 +23,9 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: src
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: NuGet
+        path: /**/*.nupkg
+          
