@@ -1,4 +1,6 @@
-﻿using Kentico.Xperience.Admin.Base.Forms;
+﻿using CMS.Helpers;
+
+using Kentico.Xperience.Admin.Base.Forms;
 
 using Xperience.DependingFieldComponents.FormComponents;
 
@@ -37,8 +39,8 @@ namespace Xperience.DependingFieldComponents.VisibilityConditions
                     return false;
                 }
 
-                var stringRepresentation = fieldValue.ToString();
-                if (stringRepresentation is not null)
+                var stringRepresentation = ValidationHelper.GetString(fieldValue, String.Empty);
+                if (!String.IsNullOrEmpty(stringRepresentation))
                 {
                     return stringRepresentation.Equals(expectedValue);
                 }
