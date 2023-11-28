@@ -22,6 +22,7 @@ The project currently contains the following input types with depending field fu
 - Number
 - Checkbox
 - Dropdown
+- Date time
 - Radio group
 
 ## Configuring depending fields in the administration
